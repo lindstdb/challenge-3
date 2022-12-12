@@ -47,3 +47,52 @@ function generatePassword() {
   return passwordSet;
 }
 
+function getPasswordLength() {
+  var userSelect = 0;
+  while ((userSelect < 8) || (userSelect > 128)) {
+    userSelect = parseInt(window.prompt("How many characters would you like your password to be? Select a number between 8 - 128."));
+
+    if (isNaN(userSelect)) {
+      userSelect = 0;
+    }
+  }
+   return userSelect;
+}
+
+function getChoice(currentSelection) {
+
+  var userChoice = "a",
+    messagePrompt = "";
+
+  var messagePrompt = ('Would you like '.concat(currentSelection));
+
+  messagePrompt = messagePrompt.concat(' characters (y/n)?');
+  
+  while (userChoice = "a") {
+
+    userChoice = (window.prompt(messagePrompt));
+
+    userChoice = userChoice.toLowerCase();
+
+    if (userChoice == "y") {
+      return true;
+
+    } else if (userChoice == "n") {
+      return false;
+    }
+  }
+}
+
+var generateButton = document.querySelector("#generate");
+
+function writePassword() {
+
+  var password = generatePassword();
+
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+generateButton.addEventListener("click", writePassword);
