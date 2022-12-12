@@ -69,22 +69,20 @@ function getPasswordLength() {
    return userSelect;
 }
 
-// This function 
+// This function controls the lowercase, uppercase, symbol, and number prompts.
 
 function getChoice(currentSelection) {
 
   var userChoice = "a",
     messagePrompt = "";
 
-  var messagePrompt = ('Would you like '.concat(currentSelection));
+  var messagePrompt = ("Would you like ".concat(currentSelection));
 
-  messagePrompt = messagePrompt.concat(' characters (y/n)?');
+  messagePrompt = messagePrompt.concat(" characters (y/n)?");
   
   while (userChoice = "a") {
 
     userChoice = (window.prompt(messagePrompt));
-
-    userChoice = userChoice.toLowerCase();
 
     if (userChoice == "y") {
       return true;

@@ -16,7 +16,7 @@ https://lindstdb.github.io/challenge-3/
 
 
 
-![screenshot](assets/screenshot-challenge-3.png)
+![screenshot](Assets\screenshot-challenge-3.JPG)
     
 
 ## Credits
