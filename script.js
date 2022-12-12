@@ -1,5 +1,7 @@
 function generatePassword() {
  
+// Establishes variables for the array to pull from.
+
   var lowercaseSet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
   var uppercaseSet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
   var numSet = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -9,6 +11,8 @@ function generatePassword() {
   var passwordLength = getPasswordLength();
 
   var charSelected = false;
+
+//Ensures at least one character option has been selected for use in password.
 
   while (charSelected == false) {
 
@@ -25,6 +29,8 @@ function generatePassword() {
     }
   }
 
+  // Determine the users inputs  and appends them to the blank array.
+
   if (lowercase) {
     userSelection = userSelection.concat(lowercaseSet);
   }
@@ -40,6 +46,8 @@ function generatePassword() {
 
   var passwordSet = "";
 
+  // This for loop randomly selects elements from the array to include in the generated password. 
+
   for (var i = 0; i < passwordLength; i++) {
     passwordSet += userSelection[Math.floor(Math.random() * (userSelection.length))];
   }
@@ -52,12 +60,16 @@ function getPasswordLength() {
   while ((userSelect < 8) || (userSelect > 128)) {
     userSelect = parseInt(window.prompt("How many characters would you like your password to be? Select a number between 8 - 128."));
 
+// This if statement verifies a number has been chosen.
+
     if (isNaN(userSelect)) {
       userSelect = 0;
     }
   }
    return userSelect;
 }
+
+// This function 
 
 function getChoice(currentSelection) {
 
