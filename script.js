@@ -1,3 +1,5 @@
+// Assignment Code
+
 function generatePassword() {
  
 // Establishes variables for the array to pull from.
@@ -93,7 +95,7 @@ function getChoice(currentSelection) {
   }
 }
 
-var generateButton = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 function writePassword() {
 
@@ -105,4 +107,6 @@ function writePassword() {
 
 }
 
-generateButton.addEventListener("click", writePassword);
+// Adds event listener to generate button.
+
+generateBtn.addEventListener("click", writePassword);
