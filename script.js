@@ -10,6 +10,8 @@ function generatePassword() {
   var symbolSet = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
   var userSelection = [];
 
+//Sets length of the password.
+
   var passwordLength = getPasswordLength();
 
   var charSelected = false;
@@ -78,18 +80,18 @@ function getChoice(currentSelection) {
   var userChoice = "a",
     messagePrompt = "";
 
-  var messagePrompt = ("Would you like ".concat(currentSelection));
+  var messagePrompt = ("Would you like ".concat (currentSelection));
 
-  messagePrompt = messagePrompt.concat(" characters (y/n)?");
+  messagePrompt = messagePrompt.concat (" characters (y/n)?");
   
   while (userChoice = "a") {
 
     userChoice = (window.prompt(messagePrompt));
 
-    if (userChoice == "y","Y") {
+    if (userChoice == "y") {
       return true;
 
-    } else if (userChoice == "n","N") {
+    } else if (userChoice == "n") {
       return false;
     }
   }
@@ -107,6 +109,6 @@ function writePassword() {
 
 }
 
-// Adds event listener to generate button.
+// Add event listener to generate button.
 
 generateBtn.addEventListener("click", writePassword);
