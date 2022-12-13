@@ -86,10 +86,10 @@ function getChoice(currentSelection) {
 
     userChoice = (window.prompt(messagePrompt));
 
-    if (userChoice == "y") {
+    if (userChoice == "y","Y") {
       return true;
 
-    } else if (userChoice == "n") {
+    } else if (userChoice == "n","N") {
       return false;
     }
   }
